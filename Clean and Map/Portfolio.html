@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12372a" />
+    <title>Portfolio | Clean and Map</title>
+    <link rel="stylesheet" href="styles/portfolio.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Clean and Map home">Prispema<span>Global</span>Enterprise</a>
+      <a class="header-link" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
+      <a class="header-link" href="./">Back to Home Page <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="bg-image" src="Images/explorer.jpg" alt="" />
+        <div class="hero-content">
+          <div class="profile-card">
+            <div class="portfolio-pic">
+              <img src="Images/Leader.jpg" alt="The person behind Clean and Map" />
+            </div>
+            <p class="eyebrow">A cleaner place starts with us</p>
+            <h1 id="hero-title">Meet the Explorer</h1>
+            <p class="hero-quote">“I believe clean spaces create better places to live, work and thrive.”</p>
+            <a class="primary-link" href="#projects">See the work <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <span class="hero-label">People · Places · Progress</span>
+      </section>
+
+      <section class="projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A look at the work</p>
+            <h2 id="projects-title">Projects with purpose</h2>
+          </div>
+          <p class="section-intro">Explore clean-up, community and mapping initiatives built around healthier shared spaces.</p>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel-viewport">
+            <div class="project-cards" id="project-track">
+              <article class="project-card">
+                <div class="project-art art-market" aria-hidden="true">
+                  <span class="art-kicker">COMMUNITY ACTION</span>
+                  <span class="art-number">01</span>
+                  <span class="art-title">A cleaner<br />market day</span>
+                  <span class="art-mark">A</span>
+                </div>
+                <div class="project-info">
+                  <p class="project-type">Community clean-up</p>
+                  <h3>Ajegunle Market Clean-up</h3>
+                  <p>A community-focused effort to make a busy shared market cleaner, safer and more welcoming.</p>
+                  <a class="project-link" href="https://drive.google.com/drive/folders/1x34FlNGhNf_RxlfTGjMAHcN5XgLftnu8?usp=drive_link">Access Project<span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-art art-map" aria-hidden="true">
+                  <span class="art-kicker">KNOW YOUR NEIGHBOURHOOD</span>
+                  <span class="art-number">02</span>
+                  <span class="art-title">See the<br />whole picture</span>
+                  <span class="map-lines"></span>
+                </div>
+                <div class="project-info">
+                  <p class="project-type">Local mapping</p>
+                  <h3>Neighbourhood Clean Map</h3>
+                  <p>A mapping concept for highlighting local clean-up needs and helping residents find ways to take part.</p>
+                  <a class="project-link" href="https://drive.google.com/file/d/1bbWF5or90zLzfGOWD1rBbRCyxvCN2MS4/view?usp=drive_link">Access Project <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-art art-green" aria-hidden="true">
+                  <span class="art-kicker">MAKE ROOM TO GROW</span>
+                  <span class="art-number">03</span>
+                  <span class="art-title">Greener<br />shared spaces</span>
+                  <span class="leaf-shape"></span>
+                </div>
+                <div class="project-info">
+                  <p class="project-type">Public spaces</p>
+                  <h3>Green Corners Initiative</h3>
+                  <p>An idea for bringing neighbours together to care for small green spaces around their community.</p>
+                  <a class="project-link" href="#contact">Access Project <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-art art-awareness" aria-hidden="true">
+                  <span class="art-kicker">SMALL HABITS, BIG CHANGE</span>
+                  <span class="art-number">04</span>
+                  <span class="art-title">Rethink<br />what we waste</span>
+                  <span class="circle-mark">↻</span>
+                </div>
+                <div class="project-info">
+                  <p class="project-type">Awareness campaign</p>
+                  <h3>Waste-Wise Community</h3>
+                  <p>A community awareness concept encouraging thoughtful waste habits and shared responsibility.</p>
+                  <a class="project-link" href="https://drive.google.com/drive/folders/1MDhIGzM_A4XluCjvuOjplKu38_TfOJsT?usp=drive_link">Access Project <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <p class="carousel-hint">Use the arrows to discover more projects</p>
+            <div class="carousel-buttons">
+              <button class="carousel-button" id="previous-project" type="button" aria-label="Previous projects" disabled>
+                <span aria-hidden="true">←</span>
+              </button>
+              <button class="carousel-button" id="next-project" type="button" aria-label="Next projects">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer" id="contact">
+        <p>Better spaces are something we create together.</p>
+        <a href="mailto:hello@cleanandmap.com">Get in touch <span aria-hidden="true">↗</span></a>
+      </footer>
+    </main>
+
+    <script>
+      const track = document.querySelector("#project-track");
+      const cards = [...track.querySelectorAll(".project-card")];
+      const previousButton = document.querySelector("#previous-project");
+      const nextButton = document.querySelector("#next-project");
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const styles = getComputedStyle(track);
+        const gap = parseFloat(styles.columnGap) || 0;
+        const viewport = track.parentElement.getBoundingClientRect().width;
+        const visibleCount = Math.max(1, Math.round((viewport + gap) / (cardWidth + gap)));
+        const maxIndex = Math.max(0, cards.length - visibleCount);
+
+        currentIndex = Math.min(currentIndex, maxIndex);
+        track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+        previousButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= maxIndex;
+      }
+
+      previousButton.addEventListener("click", () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex += 1;
+        updateCarousel();
+      });
+
+      window.addEventListener("resize", updateCarousel);
+      updateCarousel();
+    </script>
+  </body>
+</html>
